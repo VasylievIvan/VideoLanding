@@ -8,6 +8,22 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 }
 
+.wrapper {
+	position: relative;
+	z-index: 50;
+}
+
+.scroll-indicator {
+	position: fixed;
+	top: 365px;
+	right: 145px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 115px;
+	z-index: 0;
+}
+
 .main {
 	background-image: url(img/background.png);
 	background-repeat: no-repeat;
