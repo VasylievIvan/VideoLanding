@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+	<script type="text/javascript">
+$(document).ready(function(){
+
+   	$("#input-first-name").focusout(function(){
+   		if ($("#input-first-name").val().length == 0 ) {
+   			$(".field-first-name .flag").show();
+   			$(".field-first-name .flag").css("background-image", "url(img/field_error.png)");
+   			$("#input-first-name").css("border-color", "#e30613");
+   			$("#input-first-name-error").show();
+   			$(".field-first-name").css("margin-bottom","40px");
+   		}
+   		else {
+   			$(".field-first-name .flag").show();
+   			$(".field-first-name .flag").css("background-image", "url(img/field_correct.png)");
+   			$("#input-first-name").css("border-color", "#35aa49");
+   			$("#input-first-name-error").hide();
+   			$(".field-first-name").css("margin-bottom","30px");
+   		}
+   	});
+   	$("#input-second-name").focusout(function(){
+   		if ($("#input-second-name").val().length == 0 ) {
+   			$(".field-second-name .flag").show();
+   			$(".field-second-name .flag").css("background-image", "url(img/field_error.png)");
+   			$("#input-second-name").css("border-color", "#e30613");
+   			$("#input-second-name-error").show();
+   			$(".field-second-name").css("margin-bottom","40px");
+   		}
+   		else {
+   			$(".field-second-name .flag").show();
+   			$(".field-second-name .flag").css("background-image", "url(img/field_correct.png)");
+   			$("#input-second-name").css("border-color", "#35aa49");
+   			$("#input-second-name-error").hide();
+   			$(".field-second-name").css("margin-bottom","30px");
+   		}
+   	});
+
+   	$("#input-phone").focusout(function(){
+   		if ($("#input-phone").val().length == 0 ) {
+   			$(".field-phone .flag").show();
+   			$(".field-phone .flag").css("background-image", "url(img/field_error.png)");
+   			$("#input-phone").css("border-color", "#e30613");
+   			$("#input-phone-error").show();
+   			$(".field-phone").css("margin-bottom","40px");
+   		}
+   		else {
+   			$(".field-phone .flag").show();
+   			$(".field-phone .flag").css("background-image", "url(img/field_correct.png)");
+   			$("#input-phone").css("border-color", "#35aa49");
+   			$("#input-phone-error").hide();
+   			$(".field-phone").css("margin-bottom","30px");
+   		}
+   	});
+
+   	$("#input-email").focusout(function(){
+   		if ($("#input-email").val().length == 0 ) {
+   			$("#input-email-error2").hide();
+   			$(".field-email .flag").show();
+   			$(".field-email .flag").css("background-image", "url(img/field_error.png)");
+   			$("#input-email").css("border-color", "#e30613");
+   			$("#input-email-error1").show();
+   			$(".field-email").css("margin-bottom","40px");
+   		}
+   		else {
+   			var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+   			if (!rv_email.test($("#input-email").val())) {
+   				$("#input-email-error1").hide();
+	   			$(".field-email .flag").show();
+	   			$(".field-email .flag").css("background-image", "url(img/field_error.png)");
+	   			$("#input-email").css("border-color", "#e30613");
+	   			$("#input-email-error2").show();
+	   			$(".field-email").css("margin-bottom","40px");
+
+   			}
+   			else {
+
+
+   			$(".field-email .flag").show();
+   			$(".field-email .flag").css("background-image", "url(img/field_correct.png)");
+   			$("#input-email").css("border-color", "#35aa49");
+   			$("#input-email-error1").hide();
+   			$(".field-email").css("margin-bottom","30px");
+   			$("#input-email-error2").hide();
+   			}
+   		}
+   	});
+
+   	$("#input-phone").focusout(function(){
+   		if ($("#input-phone").val().length == 0 ) {
+   			$("#input-phone-error2").hide();
+   			$(".field-phone .flag").show();
+   			$(".field-phone .flag").css("background-image", "url(img/field_error.png)");
+   			$("#input-phone").css("border-color", "#e30613");
+   			$("#input-phone-error1").show();
+   			$(".field-phone").css("margin-bottom","40px");
+   		}
+   		else {
+   			var rv_phone = /^\+?([0-9])+$/;
+   			if (!rv_phone.test($("#input-phone").val())) {
+   				$("#input-phone-error1").hide();
+	   			$(".field-phone .flag").show();
+	   			$(".field-phone .flag").css("background-image", "url(img/field_error.png)");
+	   			$("#input-phone").css("border-color", "#e30613");
+	   			$("#input-phone-error2").show();
+	   			$(".field-phone").css("margin-bottom","40px");
+
+   			}else {
+
+
+   			$(".field-phone .flag").show();
+   			$(".field-phone .flag").css("background-image", "url(img/field_correct.png)");
+   			$("#input-phone").css("border-color", "#35aa49");
+   			$("#input-phone-error1").hide();
+   			$(".field-phone").css("margin-bottom","30px");
+   			$("#input-phone-error2").hide();
+   			}
+   		}
+   	});
+   	$("#select-country").focusout(function(){
+   		$(".select-country .flag").show();
+   		$(".select-country .flag").css("background-image", "url(img/field_correct.png)");
+   		$("#select-country").css("border-color", "#35aa49");
+   	});
+
+   	$("#input-skype").focusout(function(){
+   		if ($("#input-skype").val().length == 0 ) {
+   			$(".field-skype .flag").hide();
+   			$("#input-skype").css("border-color", "#555555");
+   		}
+   		else {
+   			$(".field-skype .flag").show();
+   			$(".field-skype .flag").css("background-image", "url(img/field_correct.png)");
+   			$("#input-skype").css("border-color", "#35aa49");
+   		}
+   	});
+   	$('#select-country').keydown(function(eventObject){
+  		if(eventObject.which == 9) {
+  			//alert("sdsdsd");
+  			$("#confid").focus();
+
+  		}
+	});
+
+	$('#download').click(function(){
+		$("html, body").stop().animate({scrollTop:0}, 500, 'swing')
+	});
+
+
+
+
+
+});
+
+
+
+
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<div class="content">
+
+
+				<div class="header">
+
+					<img src="img/logo.png" alt="" class="logo">
+						<div class="contact">
+							<p class="question">Возникли вопросы?</p>
+							<a href="tel:+388005056704"><p class="phone">8 800 505 67 04</p></a>
+						</div>			
+				</div>
+
+				<h1>Получите бесплатную коллекцию<br/><strong>из пяти видео уроков по online торговле<sup>*</sup></strong></h1>
+				<div class="youtubeLogo">
+					<img src="img/youtube.png" alt="">
+				</div>
+
+				<h2 class="videoHeader">Первый урок смотрите прямо сейчас:</h2>
+
+				<div class="video">
+				<div class="v-line">
+					
+				</div>
+					<iframe width="450" height="250" src="https://www.youtube.com/embed/nQ-X23ow9wU?controls=0&showinfo=0&iv_load_policy=3&modestbranding=1" frameborder="0"></iframe>
+				</div>
+
+
+				<div class="form">
+						<form action="">
+							<h2>Для доступа ко всем 5-ти урокам введите стандартные данные:</h2>
+							<div class="fields">
+								<div class="field field-first-name">
+									<p width="117.69px">Как Ваше имя?</p>
+									<div class="flag"></div>
+									<input type="text" value="" id="input-first-name">
+									<p class="error" id="input-first-name-error">Обязательное поле</p>
+								</div>
+								<div class="field field-second-name">
+									<p>Фамилия</p>
+									<div class="flag"></div>
+									<input type="text" value="" id="input-second-name">
+									<p class="error" id="input-second-name-error">Обязательное поле</p>
+								</div>
+								
+								<div class="field select-country">
+									<p>Страна проживания</p>
+									<div class="flag"></div>
+									<select id="select-country">
+									<option>Украина</option>
+									<option>Россия</option>
+									<option>Беларусь</option>
+									<option>11111</option>
+									<option>22222</option>
+									<option>33333</option>
+									</select>
+									
+
+								</div>
+								
+								<div class="field field-email">
+									<p>E-mail</p>
+									<div class="flag"></div>
+									<input type="text" value="" id="input-email">
+									<p class="error" id="input-email-error1">Обязательное поле</p>
+									<p class="error" id="input-email-error2">Неверное значение</p>
+								</div>
+								<div class="field field-phone">
+									<p>Телефон</p>
+									<div class="flag"></div>
+									<input type="text" value="" id="input-phone">
+									<p class="error" id="input-phone-error1">Обязательное поле</p>
+									<p class="error" id="input-phone-error2">Неверное значение</p>
+								</div>
+												
+								<div class="field field-skype">
+									<p>Skype</p>
+									<div class="flag"></div>
+									<input type="text" id="input-skype">
+									<p class="error">Обязательное поле</p>
+								</div>
+
+								<div class="field caption-mobile">
+									<div class="caption">
+										<img src="img/locker.png" alt="" class="locker">
+										<h3 class="data-caption">770capital не разглашает личную<br/>информацию клиента.<br/><a href="">Политика конфиденциальности</a> <h3>
+									</div>
+								</div>
+							
+								
+								<div class="field button-main-form">
+									<input type="button" value="СКАЧАТЬ" id="send">
+								</div>
+
+								
+							</div>
+						</form>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="v-line field-reply"></div>
+
+
+		<div class="reply desktop">
+			<div class="reply-content">
+				<h2>Отзывы наших клиентов</h2>
+				<div class="reply-block">
+					<img src="img/arrow-left.png" alt="" class="arrow-left desktop-arrow">
+					
+					
+					<div class="content-comments">
+						<div class="client bounceInLeft wow " data-wow-duration="2s" id="comment1">
+							<img src="" alt="" class="photo">
+							<div class="data">
+								<h3 class="who"><i></i><br/></h3>
+								<h3 class="skype"><i></i></h3>
+							</div>
+							<p><i>
+							</i></p>
+						</div>
+						<div class="space"></div>
+						<div class="client bounceInRight wow client-desktop" data-wow-duration="2s" id="comment2">
+							<img src="" alt="" class="photo">
+							<div class="data">
+								<h3 class="who"><i></i><br/></h3>
+								<h3 class="skype"><i></i></h3>
+							</div>
+							<p><i></i></p>
+						</div>
+						</div>
+
+
+							
+					<img src="img/arrow-right.png" alt="" class="arrow-right desktop-arrow">
+					<div class="mobile-arrows">
+						<img src="img/arrow-left.png" alt="" class="arrow-left mobile-arrow">
+						<img src="img/arrow-right.png" alt="" class="arrow-right mobile-arrow">
+					</div>					
+					</div>
+
+
+					<div class="content">
+
+					<div class="reply-form">
+						<form action="">
+							<div class="first-line">
+								<div class="field">
+									<p>Представьтесь</p>
+									<input type="text">
+								</div>
+								<div class="field">
+									<p>Ваш город</p>
+									<input type="text">
+								</div>
+								<div class="field" id="last-field">
+									<p>Ваш Skype</p>
+									<input type="text">
+								</div>
+							</div>
+							<div class="second-line">
+								<div class="field">
+									<p>Напишите Ваш отзыв</p>
+									<textarea type="text"></textarea>
+								</div>
+							</div>
+							<div class="comment-wrapper">
+								<input type="button" value="ОСТАВИТЬ ОТЗЫВ" id="comment">
+							</div>
+						</form>
+					</div>
+
+					</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line"></div>
+
+
+		<div class="download">
+			<div class="content">
+				<h2>Выгодное предложение:<br/><strong>5 видео уроков по online торговле абсолютно бесплатно!</strong></h2>
+				<input type="button" value="скачать видео уроки" id="download">				
+			</div>
+		</div>
+
+		<div class="v-line"></div>
+
+
+		<div class="payments">
+			<div class="content">
+				<div class="line1">
+					<img src="img/payments/payment1.png" alt="">
+					<img src="img/payments/payment2.png" alt="">
+					<img src="img/payments/payment3.png" alt="">
+					<img src="img/payments/payment4.png" alt="">
+					<img src="img/payments/payment5.png" alt="">
+					<img src="img/payments/payment6.png" alt="">
+					<img src="img/payments/payment7.png" alt="">
+				</div>
+
+				<div class="line2">
+					<img src="img/payments/payment8.png" alt="">
+					<img src="img/payments/payment9.png" alt="">
+					<img src="img/payments/payment10.png" alt="">
+					<img src="img/payments/payment11.png" alt="">
+					<img src="img/payments/payment12.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="h-line"></div>
+
+
+		<div class="footer">
+			<div class="content">
+				<div class="links">
+					<p><a href="">Пользовательское соглашение</a> <mark class="br-desktop">|</mark><br class="br-mobile" /> <a href="">Политика конфиденциальности</a> <mark class="br-desktop">|</mark><br class="br-mobile" /> <a href="">Предупреждение о риске</a> <mark class="br-desktop">|</mark><br class="br-mobile" /> <a href="">Условия торговли</a><br/>
+					<a href="">Свидетельство о регистрации</a> <mark class="br-desktop">|</mark><br class="br-mobile" /> <a href="">Свидетельство АРБ</a> </p>
+				</div>
+
+				<div class="pics">
+					<img src="img/bottom-feature/3.png" alt="">
+					<img src="img/bottom-feature/1.png" alt="">
+					<img src="img/bottom-feature/2.png" alt="">
+				</div>
+
+				<div class="footer-text">
+					<p>* Все результаты работы<br class="br-mobile" /> в данной сфере индвивидуальны<br class="br-mobile" /> и зависят от каждого клиента<br /><br class="br-mobile" />
+					Payments are provided<br class="br-mobile" /> by Maxi Platinum Ltd, Bulgaria,<br class="br-mobile" /> Plovdiv, ZIP 4000,<br class="br-mobile" /> Bul. „Iztochen“ №137, fl. 2, app. 8</p>
+				</div>
+				<div class="sign">
+					<p>© 2010 — 2017, 770 capital</p>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	
+</body>
+</html>
