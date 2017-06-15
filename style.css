@@ -387,7 +387,7 @@ p.error {
 }
 
 .reply-form {
-	margin-top: 80px;
+	margin-top: 10px;
 }
 
 .first-line {
@@ -568,6 +568,7 @@ mark {
 	width: 100%;
 }
 .footer-line {
+	padding-top: 50px;
 	border-color: #202026;
 	margin-bottom: 350px;
 }
