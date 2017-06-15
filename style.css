@@ -439,7 +439,12 @@ p.error {
 	margin-top: 150px;
 }
 
+.download .content {
+	margin-top: 50px;
+}
+
 .download h2 {
+
 	color: #ffffff;
 	font-size: 30px;
 	text-align: center;
