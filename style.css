@@ -428,7 +428,7 @@ p.error {
 .img-icon {
 	display: flex;
 	justify-content: center;
-	margin-top: 10px;
+	margin-top: 150px;
 	align-items: center;
 }
 
@@ -436,7 +436,7 @@ p.error {
 }
 
 .download {
-	margin-top: 15px;
+	margin-top: 150px;
 }
 
 .download h2 {
@@ -479,7 +479,7 @@ p.error {
 }
 
 .payments {
-	margin-top: 15px;
+	margin-top: 150px;
 }
 
 .line1 {
@@ -563,6 +563,7 @@ mark {
 	width: 100%;
 }
 .footer-line {
+	border-color: #202026;
 	margin-bottom: 350px;
 }
 .space {
