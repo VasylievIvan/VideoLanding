@@ -12,7 +12,7 @@
 	$(window).scroll(function() {   /*тут паралаксы для двух книг*/
 
 	var st = $(this).scrollTop();  
-	console.log(st);
+	//console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".1bull").attr("src", "img/scroll-indicator-active.png");
@@ -35,15 +35,70 @@
 	}
 
 
+
+
+
 	
 });
+
+$(window).bind('mousewheel', function(e){
+	var st = $(this).scrollTop();  
+     if(e.originalEvent.wheelDelta < 0) {
+         //scroll down
+         console.log('Down');
+
+         
+        
+        if(st>=0 && st<600) {
+         	$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
+		}
+		if(st>=600 && st<1200) {
+			$("html, body").stop().animate({scrollTop:1600}, 500, 'swing');
+		}
+		if(st>=1200 && st<2200) {
+			$("html, body").stop().animate({scrollTop:2500}, 500, 'swing');
+		}
+		if(st>=2200 && st<2700) {
+			$("html, body").stop().animate({scrollTop:3033}, 500, 'swing');
+		}
+		if(st>=2700) {
+		}
+
+     }else {
+         //scroll up
+         console.log('Up');
+
+         if(st>=0 && st<600) {
+         	$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+		}
+		if(st>=600 && st<1200) {
+			$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+		}
+		if(st>=1200 && st<2200) {
+			$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
+		}
+		if(st>=2200 && st<2700) {
+			$("html, body").stop().animate({scrollTop:1600}, 500, 'swing');
+		}
+		if(st>=2700) {
+			$("html, body").stop().animate({scrollTop:2500}, 500, 'swing');
+		}
+     }
+
+     //prevent page fom scrolling
+    // return false;
+ });
+
+	
 
 
 
 $(document).ready(function(){
 
+
+
 	var st = $(this).scrollTop();  
-	console.log(st);
+	//console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".1bull").attr("src", "img/scroll-indicator-active.png");
@@ -70,7 +125,7 @@ $(document).ready(function(){
 		$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
 	});
 	$(".2bull").click(function(){
-		$("html, body").stop().animate({scrollTop:1000}, 500, 'swing');
+		$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
 	});
 	$(".3bull").click(function(){
 		$("html, body").stop().animate({scrollTop:1600}, 500, 'swing');
