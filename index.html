@@ -8,7 +8,56 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 	<script type="text/javascript">
+
+	$(window).scroll(function() {   /*тут паралаксы для двух книг*/
+
+	var st = $(this).scrollTop();  
+	console.log(st);
+	if(st>=0 && st<600) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".1bull").attr("src", "img/scroll-indicator-active.png");
+	}
+	if(st>=600 && st<1200) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".2bull").attr("src", "img/scroll-indicator-active.png");
+	}
+	if(st>=1200 && st<2200) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".3bull").attr("src", "img/scroll-indicator-active.png");
+	}
+	if(st>=2200 && st<2700) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".4bull").attr("src", "img/scroll-indicator-active.png");
+	}
+	if(st>=2700) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".5bull").attr("src", "img/scroll-indicator-active.png");
+	}
+
+
+	
+});
+
+
+
 $(document).ready(function(){
+
+
+	$(".1bull").click(function(){
+		$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+	});
+	$(".2bull").click(function(){
+		$("html, body").stop().animate({scrollTop:1000}, 500, 'swing');
+	});
+	$(".3bull").click(function(){
+		$("html, body").stop().animate({scrollTop:1600}, 500, 'swing');
+	});
+	$(".4bull").click(function(){
+		$("html, body").stop().animate({scrollTop:2500}, 500, 'swing');
+	});
+	$(".5bull").click(function(){
+		$("html, body").stop().animate({scrollTop:3033}, 500, 'swing');
+	});
 
    	$("#input-first-name").focusout(function(){
    		if ($("#input-first-name").val().length == 0 ) {
@@ -150,7 +199,8 @@ $(document).ready(function(){
 	});
 
 	$('#download').click(function(){
-		$("html, body").stop().animate({scrollTop:0}, 500, 'swing')
+		$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+
 	});
 
 
@@ -166,11 +216,11 @@ $(document).ready(function(){
 </head>
 <body>
 	<div class="scroll-indicator">
-		<img src="img/scroll-indicator.png" alt="">
-		<img src="img/scroll-indicator.png" alt="">
-		<img src="img/scroll-indicator.png" alt="">
-		<img src="img/scroll-indicator.png" alt="">
-		<img src="img/scroll-indicator.png" alt="">
+		<img src="img/scroll-indicator.png" alt="" class="bullet 1bull">
+		<img src="img/scroll-indicator.png" alt="" class="bullet 2bull">
+		<img src="img/scroll-indicator.png" alt="" class="bullet 3bull">
+		<img src="img/scroll-indicator.png" alt="" class="bullet 4bull">
+		<img src="img/scroll-indicator.png" alt="" class="bullet 5bull">
 	</div>
 	<div class="wrapper">
 		<div class="main">
