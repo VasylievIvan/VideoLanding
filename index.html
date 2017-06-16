@@ -42,6 +42,29 @@
 
 $(document).ready(function(){
 
+	var st = $(this).scrollTop();  
+	console.log(st);
+	if(st>=0 && st<600) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".1bull").attr("src", "img/scroll-indicator-active.png");
+	}
+	if(st>=600 && st<1200) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".2bull").attr("src", "img/scroll-indicator-active.png");
+	}
+	if(st>=1200 && st<2200) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".3bull").attr("src", "img/scroll-indicator-active.png");
+	}
+	if(st>=2200 && st<2700) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".4bull").attr("src", "img/scroll-indicator-active.png");
+	}
+	if(st>=2700) {
+		$(".bullet").attr("src", "img/scroll-indicator.png");
+		$(".5bull").attr("src", "img/scroll-indicator-active.png");
+	}
+
 
 	$(".1bull").click(function(){
 		$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
