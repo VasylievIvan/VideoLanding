@@ -718,6 +718,9 @@ mark {
 }
 
 @media screen and (max-width: 680px) {
+	.reply {
+	margin-top: 50px;
+}
 
 	.footer-line {
 	margin-bottom: 650px;
@@ -847,6 +850,15 @@ mark {
 	.form {
 		margin-top: 50px; 
 	}
+	.download {
+		margin-top: 50px;
+	}
+	.payments {
+		margin-top: -20px;
+	}
+
+	
+
 
 }
 
