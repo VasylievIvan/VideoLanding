@@ -135,6 +135,15 @@ h1 strong {
 	border: none;
 }
 
+
+
+.arrow-left {
+	z-index: 99999;
+}
+.arrow-right {
+	z-index: 99999;
+}
+
 .videoHeader {
 	color: #c6ff00;
 	font-size: 24px;
@@ -163,7 +172,7 @@ h1 strong {
 }
 
 .form {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .form h2 {
@@ -348,9 +357,37 @@ p.error {
 
 .content-comments {
 	width: 980px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	/*height: 400px;*/
+}
+
+.client p {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 300;
+	margin: 40px;
+	margin-bottom: 0;
+	line-height: 1.5em;
+
+}
+.data {
+	color: #888888;
+	width: 300px;
+	float: left;
+	margin-left: 40px;
+	margin-top: 40px;
+}
+
+.data h3 {
+	margin: 0;
+	font-size: 18px;
+	width: 300px;
+	font-weight: 500;
+}
+
+.client img {
+	float: right;
+	margin-right: 40px;
+	margin-top: 20px;
 }
 
 
@@ -428,7 +465,7 @@ p.error {
 .img-icon {
 	display: flex;
 	justify-content: center;
-	margin-top: 150px;
+	margin-top: 50px;
 	align-items: center;
 }
 
