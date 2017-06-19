@@ -12,24 +12,24 @@
 	$(window).scroll(function() {   /*тут паралаксы для двух книг*/
 
 	var st = $(this).scrollTop();  
-	//console.log(st);
+	console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".1bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=600 && st<1200) {
+	if(st>=600 && st<1600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".2bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=1200 && st<2200) {
+	if(st>=1600 && st<2600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".3bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=2200 && st<2700) {
+	if(st>=2600 && st<3200) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".4bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=2700) {
+	if(st>=3200) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".5bull").attr("src", "img/scroll-indicator-active.png");
 	}
@@ -45,43 +45,43 @@ $(window).bind('mousewheel', function(e){
 	var st = $(this).scrollTop();  
      if(e.originalEvent.wheelDelta < 0) {
          //scroll down
-         console.log('Down');
+         //console.log('Down');
 
          
         
         if(st>=0 && st<600) {
          	$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
 		}
-		if(st>=600 && st<1200) {
-			$("html, body").stop().animate({scrollTop:1600}, 500, 'swing');
+		if(st>=600 && st<1600) {
+			$("html, body").stop().animate({scrollTop:2000}, 500, 'swing');
 		}
-		if(st>=1200 && st<2200) {
-			$("html, body").stop().animate({scrollTop:2500}, 500, 'swing');
+		if(st>=1600 && st<2600) {
+			$("html, body").stop().animate({scrollTop:3000}, 500, 'swing');
 		}
-		if(st>=2200 && st<2700) {
-			$("html, body").stop().animate({scrollTop:3033}, 500, 'swing');
+		if(st>=2600 && st<3200) {
+			$("html, body").stop().animate({scrollTop:3384}, 500, 'swing');
 		}
-		if(st>=2700) {
+		if(st>=3200) {
 		}
 
      }else {
          //scroll up
-         console.log('Up');
+         //console.log('Up');
 
          if(st>=0 && st<600) {
          	$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
 		}
-		if(st>=600 && st<1200) {
+		if(st>=600 && st<1600) {
 			$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
 		}
-		if(st>=1200 && st<2200) {
+		if(st>=1600 && st<2600) {
 			$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
 		}
-		if(st>=2200 && st<2700) {
-			$("html, body").stop().animate({scrollTop:1600}, 500, 'swing');
+		if(st>=2600 && st<3200) {
+			$("html, body").stop().animate({scrollTop:2000}, 500, 'swing');
 		}
-		if(st>=2700) {
-			$("html, body").stop().animate({scrollTop:2500}, 500, 'swing');
+		if(st>=3200) {
+			$("html, body").stop().animate({scrollTop:3000}, 500, 'swing');
 		}
      }
 
@@ -98,24 +98,24 @@ $(document).ready(function(){
 
 
 	var st = $(this).scrollTop();  
-	//console.log(st);
+	console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".1bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=600 && st<1200) {
+	if(st>=600 && st<1600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".2bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=1200 && st<2200) {
+	if(st>=1600 && st<2600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".3bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=2200 && st<2700) {
+	if(st>=2600 && st<3200) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".4bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=2700) {
+	if(st>=3200) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".5bull").attr("src", "img/scroll-indicator-active.png");
 	}
@@ -327,6 +327,10 @@ $(document).ready(function(){
 				</div>
 
 				<img src="img/mobile-arrow-down.png" alt="" class="mobile-arrow-down">
+
+				<div class="img-icon">
+					<img src="img/icon.png" alt="" class="icon">
+				</div>
 
 
 				<div class="form">
