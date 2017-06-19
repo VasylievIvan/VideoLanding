@@ -358,6 +358,7 @@ p.error {
 .content-comments {
 	width: 980px;
 	/*height: 400px;*/
+	margin-bottom: 20px;
 }
 
 .client p {
@@ -371,7 +372,7 @@ p.error {
 }
 .data {
 	color: #888888;
-	width: 300px;
+	width: 250px;
 	float: left;
 	margin-left: 40px;
 	margin-top: 40px;
@@ -616,6 +617,15 @@ mark {
 .footer-flex {
 	display: flex;
 	justify-content: center;	
+
+}
+
+@media screen and (max-width: 1060px) {
+	.content-comments {
+		width: 900px;
+
+	}
+
 }
 
 @media screen and (max-width: 1050px) {
@@ -632,6 +642,22 @@ mark {
 		height: 370px;
 	}
 }
+
+@media screen and (max-width: 980px) {
+	.content-comments {
+		width: 870px;
+
+	}
+	.data h3 {
+		width: 220px;
+	}
+	.data {
+		width: 220px;
+	}
+
+}
+
+
 
 @media screen and (max-width: 950px) {
 	.fields {
@@ -665,6 +691,7 @@ mark {
 
 	.content-comments {
 		justify-content: center;
+		
 	}
 	.first-line {
 		padding-right: 20px;
@@ -679,7 +706,7 @@ mark {
 		justify-content: space-around;
 	}
 	.content-comments {
-		width: 435px;
+		width: 470px;
 	}
 }
 
@@ -851,7 +878,14 @@ mark {
 		flex-wrap: wrap;
 	}
 	.content-comments {
-		width: 100%;
+		width: 420px;
+	}
+	.data h3 {
+		font-size: 16px;
+		width: 185px;
+	}
+	.data {
+		width: 185px;
 	}
 	.video {
 		width: 420px;

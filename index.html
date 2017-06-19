@@ -105,7 +105,16 @@ $(document).ready(function(){
  		adaptiveHeight: true,
  		prevArrow: $('arrow-left'),
  		nextArrow: $('arrow-right'),
- 		//variableWidth: true
+ 		//variableWidth: true,
+ 		responsive: [
+ 		{
+ 			breakpoint: 951,
+ 			settings: {
+ 				slidesToShow: 1
+ 			}
+
+ 		}
+ 		]
       });
 
 	$('.arrow-right').click(function(){
