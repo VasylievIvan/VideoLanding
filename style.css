@@ -8,6 +8,16 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 }
 
+.backgrounds {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	overflow: hidden;
+}
+.backgrounds img {
+	margin-bottom: 250px;
+}
+
 .wrapper {
 	position: relative;
 	z-index: 50;
@@ -28,7 +38,7 @@ box-shadow: 0px 5px 50px 5px rgba(0,0,0,0.75);
 }
 
 .main {
-	background-image: url(img/background.png);
+	/*background-image: url(img/background.png);*/
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 }
@@ -44,7 +54,7 @@ box-shadow: 0px 5px 50px 5px rgba(0,0,0,0.75);
 }
 
 .wrapper {
-	background-color: #202026;
+	background-color: rgba(32, 32, 38, 0.9);
 	max-width: 1300px;
 	margin: 0 auto;
 }
@@ -541,13 +551,19 @@ p.error {
 	align-items: center;
 	flex-wrap: wrap;
 }
+.hidder {
+	height: 100px;
+	overflow: hidden;
+}
+
 
 .footer {
-	background-color: #202026;
+	background-color: rgba(32, 32, 38, 0.9);
 	text-align: center;
 	line-height: 1.8;
 	font-size: 16px;
 	font-weight: 300;
+	display: none;
 }
 .links {
 	color: #c5ff00;
@@ -612,7 +628,7 @@ mark {
 	margin-bottom: 350px;
 }
 .space {
-	height: 500px;
+	height: 150px;
 }
 .footer-flex {
 	display: flex;
@@ -718,6 +734,12 @@ mark {
 }
 
 @media screen and (max-width: 680px) {
+	.backgrounds {
+		display: none;
+	}
+	.wrapper {
+		background-color: rgba(32, 32, 38, 1);
+	}
 	.reply {
 	margin-top: 50px;
 }
