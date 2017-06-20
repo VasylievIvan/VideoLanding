@@ -29,11 +29,11 @@
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".3bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=2600 && st<3200) {
+	if(st>=2600 && st<2900) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".4bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=3200) {
+	if(st>=2900) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".5bull").attr("src", "img/scroll-indicator-active.png");
 	}
@@ -62,10 +62,10 @@ $(window).bind('mousewheel', function(e){
 		if(st>=1600 && st<2600) {
 			$("html, body").stop().animate({scrollTop:2800}, 500, 'swing');
 		}
-		if(st>=2600 && st<3200) {
+		if(st>=2600 && st<2900) {
 			$("html, body").stop().animate({scrollTop:3500}, 500, 'swing');
 		}
-		if(st>=3200) {
+		if(st>=2900) {
 		}
 
      }else {
@@ -81,16 +81,16 @@ $(window).bind('mousewheel', function(e){
 		if(st>=1600 && st<2600) {
 			$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
 		}
-		if(st>=2600 && st<3200) {
+		if(st>=2600 && st<2900) {
 			$("html, body").stop().animate({scrollTop:1850}, 500, 'swing');
 		}
-		if(st>=3200) {
+		if(st>=2900) {
 			$("html, body").stop().animate({scrollTop:2800}, 500, 'swing');
 		}
      }
 
      //prevent page fom scrolling
-    // return false;
+     return false;
  });
 
 	
@@ -142,11 +142,11 @@ $(document).ready(function(){
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".3bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=2600 && st<3200) {
+	if(st>=2600 && st<2900) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".4bull").attr("src", "img/scroll-indicator-active.png");
 	}
-	if(st>=3200) {
+	if(st>=2900) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".5bull").attr("src", "img/scroll-indicator-active.png");
 	}
