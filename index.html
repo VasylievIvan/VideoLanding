@@ -54,16 +54,16 @@ $(window).bind('mousewheel', function(e){
          
         
         if(st>=0 && st<600) {
-         	$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
+         	$("html, body").stop().animate({scrollTop:856}, 856-st, 'swing');
 		}
 		if(st>=600 && st<1600) {
-			$("html, body").stop().animate({scrollTop:1850}, 500, 'swing');
+			$("html, body").stop().animate({scrollTop:1850}, 1850-st, 'swing');
 		}
 		if(st>=1600 && st<2600) {
-			$("html, body").stop().animate({scrollTop:2800}, 500, 'swing');
+			$("html, body").stop().animate({scrollTop:2800}, 2800-st, 'swing');
 		}
 		if(st>=2600 && st<2900) {
-			$("html, body").stop().animate({scrollTop:3500}, 500, 'swing');
+			$("html, body").stop().animate({scrollTop:3500}, 3500-st, 'swing');
 		}
 		if(st>=2900) {
 		}
@@ -73,24 +73,24 @@ $(window).bind('mousewheel', function(e){
          //console.log('Up');
 
          if(st>=0 && st<600) {
-         	$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+         	$("html, body").stop().animate({scrollTop:0}, st, 'swing');
 		}
 		if(st>=600 && st<1600) {
-			$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+			$("html, body").stop().animate({scrollTop:0}, st, 'swing');
 		}
 		if(st>=1600 && st<2600) {
-			$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
+			$("html, body").stop().animate({scrollTop:856}, st-856, 'swing');
 		}
 		if(st>=2600 && st<2900) {
-			$("html, body").stop().animate({scrollTop:1850}, 500, 'swing');
+			$("html, body").stop().animate({scrollTop:1850}, st-1850, 'swing');
 		}
 		if(st>=2900) {
-			$("html, body").stop().animate({scrollTop:2800}, 500, 'swing');
+			$("html, body").stop().animate({scrollTop:2800}, st-2800, 'swing');
 		}
      }
 
      //prevent page fom scrolling
-     return false;
+     //return false;
  });
 
 	
