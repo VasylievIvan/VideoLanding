@@ -920,10 +920,64 @@ mark {
 	.line2 {
 		width: 420px;
 	}
+}
 
 
+@media screen and (max-width: 420px) {
 
+	.logo {
+		height: 30px;
 
+	}
+
+	.video {
+		width: 320px;
+	}
+	.video iframe {
+		width: 240px;
+		height: 135px;
+		margin-top: 65px;
+   	 	margin-left: 39px;
+	}
+	
+	.line1 {
+		width: 320px;
+	}
+	.line2 {
+		width: 320px;
+	}
+
+	.line1 img {
+		/*margin-right: 5px;
+		margin-left: 5px;*/
+		/*max-height: 20px;
+		max-width: 50px;*/
+	}
+
+	.content-comments {
+		width: 320px;
+	}
+	.client p {
+		font-size: 15px;
+	}
+	.data h3 {
+		font-size: 13px;
+		width: 152px;
+	}
+	.data {
+		width: 152px;
+	}
+	.client img {
+		width: 50px;
+		margin-top: 30px;
+	}
+
+	.contact .phone {
+		border: none;
+		margin-top: 5px;
+	}
 
 }
+
+
 
