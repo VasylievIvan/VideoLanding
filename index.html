@@ -20,7 +20,13 @@
 	$(".backgrounds").css({
 		"transform" : "translate(0%, -" + st/120 + "%"
 	});  
-	//console.log(st);
+
+	if(st > 2800){
+		$(".footer").show();
+	}else{
+		$(".footer").hide();
+	}
+	console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".1bull").attr("src", "img/scroll-indicator-active.png");
@@ -97,11 +103,23 @@ $(window).bind('mousewheel', function(e){
      //return false;
  });
 
-	
+$(window).resize(function() {
+if(window.matchMedia("screen and (min-width: 1620px)").matches) {
+	$(".scroll-indicator").show();
+}else {
+	$(".scroll-indicator").hide();
+}
+
+});
 
 
 
 $(document).ready(function(){
+	if(window.matchMedia("screen and (min-width: 1620px)").matches) {
+	$(".scroll-indicator").show();
+}else {
+	$(".scroll-indicator").hide();
+}
 	$('.content-comments').slick({
 		//infinite: true,
   		slidesToShow: 2,
@@ -328,6 +346,7 @@ $(document).ready(function(){
 	</script>
 </head>
 <body>
+<div class="super-wrapper">
 <div class="backgrounds">
 	<img src="img/01.png" alt="">
 	<img src="img/02.png" alt="">
@@ -613,7 +632,11 @@ $(document).ready(function(){
 
 
 	</div>
-	<div class="hidder">
+	
+
+		
+		</div>	
+		<div class="hidder">
 	<div class="footer-flex">
 	<div class="footer wrapper">
 	<div class="space"></div>
@@ -640,9 +663,7 @@ $(document).ready(function(){
 		</div>
 		</div>
 		</div>
-
-		
 		<script type="text/javascript" src="slick/slick.min.js"></script>
-	
+
 </body>
 </html>

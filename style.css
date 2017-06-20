@@ -7,6 +7,11 @@ body {
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
 }
+.super-wrapper {
+	background-color: #11111b;
+	position: relative;
+	z-index: 50;
+}
 
 .backgrounds {
 	position: absolute;
@@ -24,6 +29,9 @@ body {
 	-webkit-box-shadow: 0px 5px 50px 5px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 5px 50px 5px rgba(0,0,0,0.75);
 box-shadow: 0px 5px 50px 5px rgba(0,0,0,0.75);
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+
 }
 
 .scroll-indicator {
@@ -41,6 +49,7 @@ box-shadow: 0px 5px 50px 5px rgba(0,0,0,0.75);
 	/*background-image: url(img/background.png);*/
 	background-repeat: no-repeat;
 	background-size: 100% auto;
+	margin-top: 50px;
 }
 
 .content {
