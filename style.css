@@ -20,7 +20,8 @@ body {
 	overflow: hidden;
 }
 .backgrounds img {
-	margin-bottom: 250px;
+	margin-bottom: 700px;
+	opacity: 0.5;
 }
 
 .wrapper {
@@ -49,7 +50,7 @@ border-top-right-radius: 30px;
 	/*background-image: url(img/background.png);*/
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 .content {
@@ -59,7 +60,7 @@ border-top-right-radius: 30px;
 }
 
 .header {
-	padding-top: 50px;
+	padding-top: 20px;
 }
 
 .wrapper {
@@ -634,7 +635,7 @@ mark {
 .footer-line {
 	padding-top: 50px;
 	border-color: #202026;
-	margin-bottom: 350px;
+	margin-bottom: 250px;
 }
 .space {
 	height: 150px;
@@ -737,7 +738,7 @@ mark {
 
 @media screen and (max-width: 773px) {
 	.footer-line {
-	margin-bottom: 400px;
+	margin-bottom: 300px;
 }
 
 }
@@ -754,7 +755,7 @@ mark {
 }
 
 	.footer-line {
-	margin-bottom: 650px;
+	margin-bottom: 550px;
 }
 
 	.fields {
