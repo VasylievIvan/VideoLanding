@@ -54,7 +54,7 @@ box-shadow: 0px 5px 50px 5px rgba(0,0,0,0.75);
 }
 
 .wrapper {
-	background-color: rgba(32, 32, 38, 0.9);
+	background-color: rgba(32, 32, 38, 0.95);
 	max-width: 1300px;
 	margin: 0 auto;
 }
