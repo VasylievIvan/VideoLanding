@@ -977,6 +977,33 @@ mark {
 		margin-top: 5px;
 	}
 
+	.download h2 {
+		font-size: 19px;
+	}
+
+	.form h2 {
+		font-size: 19px;
+	}
+
+	.videoHeader {
+		font-size: 17px;
+	}
+	h1 {
+		font-size: 20px;
+	}
+
+	.reply h2 {
+		font-size: 26px;
+	}
+
+	.reply p {
+		margin: 20px;
+		margin-bottom: 0;
+	}
+	.data {
+		margin-left: 20px;
+	}
+
 }
 
 

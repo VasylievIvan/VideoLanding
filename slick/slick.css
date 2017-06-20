@@ -125,3 +125,23 @@
 /*.slick-slide{
 width: 20px;
 }*/
+
+@media screen and (max-width: 420px) {
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 400px;
+    min-height: 1px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+
+    user-select: none; 
+    outline: none; 
+}
+
+
+}
+
