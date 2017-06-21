@@ -640,6 +640,14 @@ mark {
 		display: none;
 	}
 
+select::-ms-expand {
+    display: none;
+}
+
+textarea {
+    overflow: hidden;
+}
+
 .footer {
 	position: fixed;
 	bottom: 0;
