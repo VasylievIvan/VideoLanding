@@ -15,6 +15,7 @@
 
 
 	$(window).scroll(function() {   
+		if(window.matchMedia("screen and (min-width: 1350px)").matches) {
 
 	var st = $(this).scrollTop();
 	$(".backgrounds").css({
@@ -48,7 +49,7 @@
 		$(".5bull").attr("src", "img/scroll-indicator-active.png");
 	}
 
-
+}
 
 
 
