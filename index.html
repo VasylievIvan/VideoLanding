@@ -57,11 +57,12 @@
 
 $(window).bind('mousewheel', function(e){
 	var st = $(this).scrollTop();  
+	if(window.matchMedia("screen and (min-width: 1350px)").matches) {
+    
+
      if(e.originalEvent.wheelDelta < 0) {
          //scroll down
-         //console.log('Down');
-
-         
+         //console.log('Down');         
         
         if(st>=0 && st<600) {
          	$("html, body").stop().animate({scrollTop:856}, 856-st, 'swing');
@@ -98,7 +99,7 @@ $(window).bind('mousewheel', function(e){
 			$("html, body").stop().animate({scrollTop:2800}, st-2800, 'swing');
 		}
      }
-
+}
      //prevent page fom scrolling
      //return false;
  });
