@@ -49,6 +49,13 @@
 		$(".5bull").attr("src", "img/scroll-indicator-active.png");
 	}
 
+}else {
+	if(window.matchMedia("screen and (max-width: 1350px)").matches) {
+		$(".backgrounds").css({
+		"transform" : "translate(0%, -" + 30 + "%"
+	}); 
+
+	}
 }
 
 
