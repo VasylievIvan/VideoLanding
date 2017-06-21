@@ -267,6 +267,22 @@ h1 strong {
 	font-size: 14px;
 }
 
+.button-text {
+	color: #000000;
+	position: absolute;
+	z-index: 99999;
+}
+h3.button-text {
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 100px;
+}
+h4.button-text {
+	margin-top: 25px;
+	margin-left: 55px;
+	font-weight: 400;
+}
+
 .caption h3 {
 	font-size: 12px;
 	font-weight: 300;
@@ -686,6 +702,18 @@ mark {
 
 
 @media screen and (max-width: 950px) {
+
+	h3.button-text {
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 0px;
+}
+h4.button-text {
+	margin-top: 25px;
+	margin-left: 0px;
+	font-weight: 400;
+}
+
 	.fields {
 		flex-direction: column;
 		height: 260px;
@@ -744,7 +772,7 @@ mark {
 }
 
 @media screen and (max-width: 680px) {
-	
+
 	.backgrounds {
 		display: none;
 	}
