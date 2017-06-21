@@ -12,10 +12,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<script type="text/javascript">
+	var ua = navigator.userAgent;
 
 
 	$(window).scroll(function() {   
-		if(window.matchMedia("screen and (min-width: 1350px)").matches) {
+		if(window.matchMedia("screen and (min-width: 1350px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
 
 	var st = $(this).scrollTop();
 	$(".backgrounds").css({
@@ -27,7 +28,7 @@
 	}else{
 		$(".footer").hide();
 	}*/
-	console.log(st);
+	//console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".1bull").attr("src", "img/scroll-indicator-active.png");
@@ -68,7 +69,7 @@
 
 $(window).bind('mousewheel', function(e){
 	var st = $(this).scrollTop();  
-	if(window.matchMedia("screen and (min-width: 1350px)").matches) {
+	if(window.matchMedia("screen and (min-width: 1350px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
     
 
      if(e.originalEvent.wheelDelta < 0) {
@@ -127,7 +128,11 @@ if(window.matchMedia("screen and (min-width: 1620px)").matches) {
 
 
 $(document).ready(function(){
-	if(window.matchMedia("screen and (min-width: 1620px)").matches) {
+	if((ua.indexOf('Trident/7.0') + 1)) {
+		$(".backgrounds").hide();
+	}
+	
+	if(window.matchMedia("screen and (min-width: 1620px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
 	$(".scroll-indicator").show();
 }else {
 	$(".scroll-indicator").hide();
@@ -345,11 +350,6 @@ $(document).ready(function(){
 		$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
 
 	});
-
-
-
-
-
 });
 
 
