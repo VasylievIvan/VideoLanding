@@ -123,6 +123,11 @@ if(window.matchMedia("screen and (min-width: 1620px)").matches) {
 	$(".scroll-indicator").hide();
 }
 
+if((ua.indexOf('Trident/7.0') + 1)) {
+		
+		$(".footer").css("margin-left", -$(".footer").width()/2);
+			}
+
 });
 
 
@@ -130,7 +135,9 @@ if(window.matchMedia("screen and (min-width: 1620px)").matches) {
 $(document).ready(function(){
 	if((ua.indexOf('Trident/7.0') + 1)) {
 		$(".backgrounds").hide();
-	}
+		$(".footeк").css("left", "50%");
+		$(".footer").css("margin-left", -$(".footer").width()/2);
+			}
 	
 	if(window.matchMedia("screen and (min-width: 1620px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
 	$(".scroll-indicator").show();
@@ -348,7 +355,6 @@ $(document).ready(function(){
 
 	$('#download').click(function(){
 		$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
-
 	});
 });
 
