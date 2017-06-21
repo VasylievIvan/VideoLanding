@@ -60,7 +60,7 @@ border-top-right-radius: 30px;
 }
 
 .header {
-	padding-top: 20px;
+	padding-top: 40px;
 }
 
 .wrapper {
@@ -108,7 +108,8 @@ h1 {
 	color: #ffffff;
 	font-weight: 200;
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 90px;
+	margin-bottom: 15px;
 
 }
 
@@ -120,7 +121,7 @@ h1 strong {
 .youtubeLogo {
 	margin: 0 auto;
 	width: 70px;
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 .v-line {
@@ -366,7 +367,7 @@ p.error {
 }
 
 .reply {
-	margin-top: 220px;
+	margin-top: 150px;
 }
 
 .reply-block {
