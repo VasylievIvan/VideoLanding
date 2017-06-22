@@ -153,7 +153,7 @@ $(window).bind('mousewheel', function(e){
 
 }
      //prevent page fom scrolling
-     return false;
+     //return false;
  });
 
 $(window).resize(function() {
@@ -177,7 +177,9 @@ $(document).ready(function(){
 		$(".backgrounds").hide();
 		$(".footeк").css("left", "50%");
 		$(".footer").css("margin-left", -$(".footer").width()/2);
-		$(".fields").css("max-width", "940px")
+		$(".fields").css("max-width", "940px");
+		$("#comment").css("margin-left", "50%");
+		$("#comment").css("margin-left", -$("#comment").width()/2);
 			}
 	
 	if(window.matchMedia("screen and (min-width: 1620px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
