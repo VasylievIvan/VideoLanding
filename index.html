@@ -137,6 +137,7 @@ $(document).ready(function(){
 		$(".backgrounds").hide();
 		$(".footeк").css("left", "50%");
 		$(".footer").css("margin-left", -$(".footer").width()/2);
+		$(".fields").css("max-width", "940px")
 			}
 	
 	if(window.matchMedia("screen and (min-width: 1620px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
@@ -354,6 +355,9 @@ $(document).ready(function(){
 	});
 
 	$('#download').click(function(){
+		$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
+	});
+	$('.youtubeLogo').click(function(){
 		$("html, body").stop().animate({scrollTop:856}, 500, 'swing');
 	});
 });
