@@ -216,7 +216,7 @@ $(document).ready(function(){
 	});
 
 
-
+if(!(ua.indexOf('Trident/7.0') + 1)) {
 	var st = $(this).scrollTop();  
 	//console.log(st);
 	if(st>=0 && st<600) {
@@ -239,6 +239,7 @@ $(document).ready(function(){
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".5bull").attr("src", "img/scroll-indicator-active.png");
 	}
+}
 
 
 	$(".1bull").click(function(){
