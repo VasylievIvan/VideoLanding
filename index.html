@@ -72,7 +72,7 @@ $(window).bind('mousewheel', function(e){
 		if(!allowAnimation) {
 			return false;
 		}
-    console.log("start");
+    
 
 
      if(e.originalEvent.wheelDelta < 0) {
@@ -82,28 +82,24 @@ $(window).bind('mousewheel', function(e){
         if(st>=0 && st<600) {
         	allowAnimation = false;
          	$("html, body").stop().animate({scrollTop:856}, 856-st, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
 		if(st>=600 && st<1600) {
 			allowAnimation = false;
 			$("html, body").stop().animate({scrollTop:1780}, 1780-st, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
 		if(st>=1600 && st<2600) {
 			allowAnimation = false;
 			$("html, body").stop().animate({scrollTop:2650}, 2650-st, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
 		if(st>=2600 && st<2900) {
 			allowAnimation = false;
 			$("html, body").stop().animate({scrollTop:3500}, 3500-st, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
@@ -117,35 +113,30 @@ $(window).bind('mousewheel', function(e){
          if(st>=0 && st<600) {
          	allowAnimation = false;
          	$("html, body").stop().animate({scrollTop:0}, st, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
 		if(st>=600 && st<1600) {
 			allowAnimation = false;
 			$("html, body").stop().animate({scrollTop:0}, st, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
 		if(st>=1600 && st<2600) {
 			allowAnimation = false;
 			$("html, body").stop().animate({scrollTop:856}, st-856, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
 		if(st>=2600 && st<2900) {
 			allowAnimation = false;
 			$("html, body").stop().animate({scrollTop:1780}, st-1780, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
 		if(st>=2900) {
 			allowAnimation = false;
 			$("html, body").stop().animate({scrollTop:2650}, st-2650, 'swing', function() {
-         		console.log("finish");
          		allowAnimation = true;
          	});
 		}
