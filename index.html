@@ -28,7 +28,7 @@
 	}else{
 		$(".footer").hide();
 	}*/
-	//console.log(st);
+	console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".1bull").attr("src", "img/scroll-indicator-active.png");
@@ -49,6 +49,22 @@
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".5bull").attr("src", "img/scroll-indicator-active.png");
 	}
+
+
+	if(st>=450) {
+		if (st<850) {
+			$(".videoHeader").css("margin-top", st-450+80);
+			$(".form-h2").css("margin-top", 400-(st-450));
+		}else {
+			$(".videoHeader").css("margin-top", 850-450+80);
+			$(".form-h2").css("margin-top", 400-(850-450));
+		}
+
+	} else {
+		$(".videoHeader").css("margin-top", 450-450+80);
+			$(".form-h2").css("margin-top", 400-(450-450));
+	}
+
 
 }else {
 	if(window.matchMedia("screen and (max-width: 1350px)").matches) {
@@ -429,7 +445,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 						</div>			
 				</div>
 
-				<h1>Получите бесплатную коллекцию<br/><strong>из пяти видео уроков по online торговле<sup>*</sup></strong></h1>
+				<h1>Получите бесплатную коллекцию<br/><strong>из пяти видео уроков <br class="br-desktop"> по online торговле<sup>*</sup></strong></h1>
 				<div class="youtubeLogo">
 					<img src="img/youtube.png" alt="">
 				</div>

@@ -109,8 +109,9 @@ background-repeat: no-repeat;
 }
 
 h1 {
-	font-size: 36px;
-	color: #ffffff;
+	font-size: 34px;
+		text-transform: uppercase;
+	color: #ffd700;
 	font-weight: 200;
 	text-align: center;
 	margin-top: 90px;
@@ -118,8 +119,11 @@ h1 {
 
 }
 
+
+
 h1 strong {
-	font-weight: 400;
+	font-size: 48px;
+	font-weight: 700;
 
 }
 
@@ -202,6 +206,7 @@ h1 strong {
 }
 
 .form-h2  {
+	margin-top: 400px;
 	font-size: 30px;
 	color: #c4fd00;
 	text-align: center;
