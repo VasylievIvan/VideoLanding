@@ -18,6 +18,7 @@ body {
 	z-index: 0;
 	width: 100%;
 	overflow: hidden;
+	margin-top: 200px;
 }
 .backgrounds img {
 	margin-bottom: 700px;
@@ -55,7 +56,7 @@ background-repeat: no-repeat;
 	
 	
 	background-size: 100% auto;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 .content {
@@ -387,6 +388,7 @@ p.error {
 	text-align: center;
 	font-weight: 300;
 	text-transform: uppercase;
+	margin-bottom: 30px;
 }
 
 .client {
@@ -405,7 +407,7 @@ p.error {
 }
 
 .reply {
-	margin-top: 150px;
+	margin-top: 120px;
 }
 
 .reply-block {
@@ -534,7 +536,7 @@ p.error {
 }
 
 .download {
-	margin-top: 150px;
+	margin-top: 120px;
 	padding-top: 80px;
 
 
@@ -635,6 +637,7 @@ h2.second_h {
 border-bottom-right-radius: 15px;
 margin-top: 100px;
 padding-bottom: 20px;
+margin-bottom: 50px;
 }
 .links {
 	color: #c5ff00;
