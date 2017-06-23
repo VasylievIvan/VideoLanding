@@ -76,6 +76,9 @@
 	}); 
 
 	}
+	$(".videoHeader").css("margin-top", 450-450+80);
+			$(".form-h2").css("margin-top", 50);
+			$(".wrapper").css("background-position-y", 450-450);
 
 
 
@@ -83,6 +86,11 @@
 });
 
 	var allowAnimation = true;
+
+	function checkAnimation() {
+		return(allowAnimation);
+
+	}
 
 $(window).bind('mousewheel', function(e){
 
@@ -424,7 +432,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 
 <div class="backgrounds">
 	<img src="img/01.png" alt="">
-	<img src="img/02.png" alt="">
+	<img src="img/02.png" alt="" style="margin-left: -30px;">
 	<img src="img/03.png" alt="">
 </div>
 	<div class="scroll-indicator">
