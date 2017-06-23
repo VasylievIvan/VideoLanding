@@ -124,6 +124,7 @@ h1 {
 	margin-top: 90px;
 	margin-bottom: 15px;
 
+
 }
 
 
@@ -132,6 +133,9 @@ h1 strong {
 	font-size: 48px;
 	font-weight: 700;
 
+}
+.second_h1 {
+	margin-top: 0;
 }
 
 .youtubeLogo {
@@ -570,7 +574,7 @@ h2.second_h {
 	line-height: 1;
 	font-size: 30px;
 	margin-bottom: 90px;
-	margin-top:-20px;
+	margin-top:-10px;
 }
 
 /*.second_h {
