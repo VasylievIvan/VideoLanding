@@ -28,7 +28,7 @@
 	}else{
 		$(".footer").hide();
 	}*/
-	console.log(st);
+	//console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
 		$(".1bull").attr("src", "img/scroll-indicator-active.png");
@@ -92,7 +92,10 @@
 
 	}
 
-$(window).bind('mousewheel', function(e){
+
+
+$(window).on('mousewheel', function(e){
+	console.log("mousewheel");
 
 	var st = $(this).scrollTop();  
 	if(window.matchMedia("screen and (min-width: 1350px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
