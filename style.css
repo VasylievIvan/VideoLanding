@@ -68,6 +68,11 @@ background-repeat: no-repeat;
 	padding-top: 40px;
 }
 
+.star {
+	font-weight: 300;
+	font-size: 24px;
+}
+
 .wrapper {
 	background-color: rgba(32, 32, 38, 1);
 	max-width: 1300px;
@@ -464,11 +469,11 @@ p.error {
 
 }
 #comment:hover {
-	background-color: #4d4d64;
+	background-color: #ffec95;
 }
 
 #comment:active {
-	background-color: #292935;
+	background-color: #e3b800;
 }
 
 .comment-wrapper {
