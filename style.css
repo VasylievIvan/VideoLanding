@@ -553,7 +553,7 @@ p.error {
 	background-image: url(img/background1.png);
 	background-repeat: no-repeat;
 	background-position-x: center;
-	background-size: 200%;
+	
 }
 
 .download .content {
@@ -863,6 +863,9 @@ h4.button-text {
 }
 
 @media screen and (max-width: 680px) {
+	.third-block {
+		background-size: 150%;
+	}
 	.footer {
 		margin-bottom: 0;
 	}
@@ -959,6 +962,7 @@ border-bottom-right-radius: 0;
 		font-size: 21px;
 		font-weight: 300;
 		text-transform: none;
+
 	}
 
 	h2.second_h {
@@ -1045,6 +1049,9 @@ border-bottom-right-radius: 0;
 }
 
 @media screen and (max-width: 580px) {
+	.third-block {
+		background-size: 170%;
+	}
 	.reply h2 {
 		font-size: 21px;
 	}
@@ -1118,6 +1125,9 @@ border-bottom-right-radius: 0;
 
 
 @media screen and (max-width: 420px) {
+	.third-block {
+		background-size: 200%;
+	}
 
 	.logo {
 		height: 30px;
