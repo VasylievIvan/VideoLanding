@@ -31,23 +31,23 @@
 	//console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".1bull").attr("src", "img/scroll-indicator-active.png");
+		$(".1bull").attr("src", "img/scroll-indicator-active1.png");
 	}
 	if(st>=600 && st<1600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".2bull").attr("src", "img/scroll-indicator-active.png");
+		$(".2bull").attr("src", "img/scroll-indicator-active2.png");
 	}
 	if(st>=1600 && st<2600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".3bull").attr("src", "img/scroll-indicator-active.png");
+		$(".3bull").attr("src", "img/scroll-indicator-active1.png");
 	}
 	if(st>=2600 && st<2900) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".4bull").attr("src", "img/scroll-indicator-active.png");
+		$(".4bull").attr("src", "img/scroll-indicator-active3.png");
 	}
 	if(st>=2900) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".5bull").attr("src", "img/scroll-indicator-active.png");
+		$(".5bull").attr("src", "img/scroll-indicator-active2.png");
 	}
 
 
@@ -93,9 +93,93 @@
 	}
 
 
+$(window).bind('mousewheel', function(e){
+	console.log("mousewheel Bind");
+
+	var st = $(this).scrollTop();  
+	if(window.matchMedia("screen and (min-width: 1350px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
+		if(!allowAnimation) {
+			return false;
+		}
+    
+
+
+     if(e.originalEvent.wheelDelta < 0) {
+         //scroll down
+         //console.log('Down');         
+        
+        if(st>=0 && st<600) {
+        	allowAnimation = false;
+         	$("html, body").stop().animate({scrollTop:850}, 850-st, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=600 && st<1600) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:1780}, 1780-st, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=1600 && st<2600) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:2700}, 2700-st, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=2600 && st<2900) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:3500}, 3500-st, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=2900) {
+		}
+
+     }else {
+         //scroll up
+         //console.log('Up');
+
+         if(st>=0 && st<600) {
+         	allowAnimation = false;
+         	$("html, body").stop().animate({scrollTop:0}, st, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=600 && st<1600) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:0}, st, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=1600 && st<2600) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:850}, st-850, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=2600 && st<2900) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:1780}, st-1780, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=2900) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:2700}, st-2700, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+     }
+
+}
+     //prevent page fom scrolling
+     //return false;
+ });
+
+
 
 $(window).on('mousewheel', function(e){
-	console.log("mousewheel");
+	console.log("mousewheel On");
 
 	var st = $(this).scrollTop();  
 	if(window.matchMedia("screen and (min-width: 1350px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
@@ -242,23 +326,23 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 	//console.log(st);
 	if(st>=0 && st<600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".1bull").attr("src", "img/scroll-indicator-active.png");
+		$(".1bull").attr("src", "img/scroll-indicator-active1.png");
 	}
 	if(st>=600 && st<1600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".2bull").attr("src", "img/scroll-indicator-active.png");
+		$(".2bull").attr("src", "img/scroll-indicator-active2.png");
 	}
 	if(st>=1600 && st<2600) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".3bull").attr("src", "img/scroll-indicator-active.png");
+		$(".3bull").attr("src", "img/scroll-indicator-active1.png");
 	}
 	if(st>=2600 && st<2900) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".4bull").attr("src", "img/scroll-indicator-active.png");
+		$(".4bull").attr("src", "img/scroll-indicator-active3.png");
 	}
 	if(st>=2900) {
 		$(".bullet").attr("src", "img/scroll-indicator.png");
-		$(".5bull").attr("src", "img/scroll-indicator-active.png");
+		$(".5bull").attr("src", "img/scroll-indicator-active2.png");
 	}
 }
 

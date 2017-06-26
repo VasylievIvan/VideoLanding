@@ -37,6 +37,7 @@ border-bottom-right-radius: 15px;
 
 /*overflow: hidden;*/
 background-image: url(img/background2.png);
+background-size: 100%;
 background-repeat: no-repeat;
 background-position-x: center;
 
@@ -198,6 +199,8 @@ h1 strong {
 	height: 409px;
 	margin: 0 auto;
 	background-image: url(img/notebook2.png);
+
+
 	background-repeat: no-repeat;
 }
 .video iframe {
@@ -550,6 +553,7 @@ p.error {
 	background-image: url(img/background1.png);
 	background-repeat: no-repeat;
 	background-position-x: center;
+	background-size: 200%;
 }
 
 .download .content {
@@ -859,6 +863,18 @@ h4.button-text {
 }
 
 @media screen and (max-width: 680px) {
+	.footer {
+		margin-bottom: 0;
+	}
+	.wrapper {
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+}
+	.main {
+		margin-top: 0;
+	}
 
 	.backgrounds {
 		display: none;
@@ -940,17 +956,21 @@ h4.button-text {
 	}
 
 	.download h2 {
-		font-size: 24px;
+		font-size: 21px;
+		font-weight: 300;
+		text-transform: none;
 	}
 
 	h2.second_h {
-		font-size: 20px;
+		font-size: 21px;
+		font-weight: 400;
 	}
 	.download h2 strong {
-		font-size: 20px;
+		font-size: 21px;
 	}
 	.form-h2 {
-		font-size: 22px;
+		font-size: 18px;
+		text-transform: none;
 	}
 
 	.line1 {
@@ -1025,6 +1045,18 @@ h4.button-text {
 }
 
 @media screen and (max-width: 580px) {
+	.reply h2 {
+		font-size: 21px;
+	}
+
+	h1 {
+		font-size: 18px;
+		font-weight: 400;
+	}
+	h1 strong {
+		font-size: 21px;
+		font-weight: 400;
+	}
 	.first-line {
 		flex-direction: column;
 		width: 272px;
@@ -1110,10 +1142,16 @@ h4.button-text {
 	}
 
 	.line1 img {
+		margin-right: 5px;
+		margin-left: 5px;
+		max-height: 30px;
+		max-width: 100px;
+	}
+	.line2 img {
 		/*margin-right: 5px;
 		margin-left: 5px;*/
-		/*max-height: 20px;
-		max-width: 50px;*/
+		max-height: 30px;
+		max-width: 100px;
 	}
 
 	.content-comments {
@@ -1140,12 +1178,22 @@ h4.button-text {
 	}
 
 	.download h2 {
-		font-size: 19px;
+		font-size: 21px;
 	}
 
-	.form h2 {
-		font-size: 19px;
+	h2.second_h {
+		margin-bottom: 50px;
+
 	}
+	.download h2 strong {
+	}
+	.download {
+		padding-top: 50px;
+	}
+
+	/*.form h2 {
+		font-size: 21px;
+	}*/
 
 	.videoHeader {
 		font-size: 17px;
@@ -1154,9 +1202,7 @@ h4.button-text {
 		font-size: 20px;
 	}
 
-	.reply h2 {
-		font-size: 26px;
-	}
+	
 
 	.client p {
 		margin: 20px;
@@ -1165,6 +1211,7 @@ h4.button-text {
 	.data {
 		margin-left: 20px;
 	}
+
 
 }
 
