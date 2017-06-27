@@ -282,6 +282,12 @@ if((ua.indexOf('Trident/7.0') + 1)) {
 
 
 $(document).ready(function(){
+
+
+	var first_name_flag = 0;
+   var second_name_flag = 0;
+   var email_flag = 0;
+   var phone_flag = 0;
 	if((ua.indexOf('Trident/7.0') + 1)) {
 		$(".backgrounds").hide();
 		$(".footeк").css("left", "50%");
@@ -374,6 +380,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-first-name").css("border-color", "#e30613");
    			$("#input-first-name-error").show();
    			$(".field-first-name").css("margin-bottom","40px");
+   			first_name_flag = 0;
    		}
    		else {
    			$(".field-first-name .flag").show();
@@ -381,6 +388,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-first-name").css("border-color", "#35aa49");
    			$("#input-first-name-error").hide();
    			$(".field-first-name").css("margin-bottom","30px");
+   			first_name_flag = 1;
    		}
    	});
    	$("#input-second-name").focusout(function(){
@@ -390,6 +398,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-second-name").css("border-color", "#e30613");
    			$("#input-second-name-error").show();
    			$(".field-second-name").css("margin-bottom","40px");
+   			second_name_flag = 0;
    		}
    		else {
    			$(".field-second-name .flag").show();
@@ -397,10 +406,11 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-second-name").css("border-color", "#35aa49");
    			$("#input-second-name-error").hide();
    			$(".field-second-name").css("margin-bottom","30px");
+   			second_name_flag = 1;
    		}
    	});
 
-   	$("#input-phone").focusout(function(){
+   /*	$("#input-phone").focusout(function(){
    		if ($("#input-phone").val().length == 0 ) {
    			$(".field-phone .flag").show();
    			$(".field-phone .flag").css("background-image", "url(img/field_error.png)");
@@ -415,7 +425,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-phone-error").hide();
    			$(".field-phone").css("margin-bottom","30px");
    		}
-   	});
+   	});*/
 
    	$("#input-email").focusout(function(){
    		if ($("#input-email").val().length == 0 ) {
@@ -425,6 +435,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-email").css("border-color", "#e30613");
    			$("#input-email-error1").show();
    			$(".field-email").css("margin-bottom","40px");
+   			email_flag = 0;
    		}
    		else {
    			var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
@@ -435,6 +446,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 	   			$("#input-email").css("border-color", "#e30613");
 	   			$("#input-email-error2").show();
 	   			$(".field-email").css("margin-bottom","40px");
+	   			email_flag = 0;
 
    			}
    			else {
@@ -446,6 +458,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-email-error1").hide();
    			$(".field-email").css("margin-bottom","30px");
    			$("#input-email-error2").hide();
+   			email_flag = 1;
    			}
    		}
    	});
@@ -458,6 +471,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-phone").css("border-color", "#e30613");
    			$("#input-phone-error1").show();
    			$(".field-phone").css("margin-bottom","40px");
+   			phone_flag = 0;
    		}
    		else {
    			var rv_phone = /^\+?([0-9])+$/;
@@ -468,6 +482,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 	   			$("#input-phone").css("border-color", "#e30613");
 	   			$("#input-phone-error2").show();
 	   			$(".field-phone").css("margin-bottom","40px");
+	   			phone_flag = 0;
 
    			}else {
 
@@ -478,9 +493,17 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
    			$("#input-phone-error1").hide();
    			$(".field-phone").css("margin-bottom","30px");
    			$("#input-phone-error2").hide();
+   			phone_flag = 1;
    			}
    		}
    	});
+   	$('#send').click(function(){
+      if((phone_flag+first_name_flag+second_name_flag+email_flag) == 4) {
+      	$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+         $(".thanks").css("display", "block");
+      }
+   });
+   	$
    	$("#select-country").focusout(function(){
    		$(".select-country .flag").show();
    		$(".select-country .flag").css("background-image", "url(img/field_correct.png)");
@@ -521,6 +544,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 </head>
 <body>
 
+
 <div class="backgrounds">
 	<img src="img/01.png" alt="">
 	<img src="img/02.png" alt="" style="margin-left: -30px;">
@@ -534,6 +558,12 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 		<img src="img/scroll-indicator.png" alt="" class="bullet 5bull">
 	</div>
 	<div class="wrapper">
+	<div class="thanks">
+   <h2>Спасибо за проявленный интерес к нашей компании!</h2>
+   <h3>Для подтверждения данных наш менеджер<br/>свяжется с Вами в течении часа и отправит ссылку на видео</h3>
+   <h4>Сайт компании 770 capital</h4>
+</div>
+
 		<div class="main">
 			<div class="content">
 
@@ -648,7 +678,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 								<input type="button" value="" id="send">
 							</div>
 
-							<div class="field field-mobile">
+							<div class="field field-mobile caption-mobile">
 								<div class="caption">
 									<img src="img/locker.png" alt="" class="locker">
 									<h3 class="data-caption">770capital не разглашает личную информацию клиента. <a href="">Политика конфиденциальности</a> <h3>
