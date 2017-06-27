@@ -503,6 +503,12 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
          $(".thanks").css("display", "block");
       }
    });
+   	$('.sendmob').click(function(){
+      if((phone_flag+first_name_flag+second_name_flag+email_flag) == 4) {
+      	$("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+         $(".thanks").css("display", "block");
+      }
+   });
    	$
    	$("#select-country").focusout(function(){
    		$(".select-country .flag").show();
@@ -675,7 +681,7 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 							<div class="field button-main-form field-mobile">
 							<h3 class="button-text">СКАЧАТЬ</h3>
 								<h4 class="button-text">всю коллекцию видео</h4>
-								<input type="button" value="" id="send">
+								<input type="button" value="" id="send" class="sendmob">
 							</div>
 
 							<div class="field field-mobile caption-mobile">
