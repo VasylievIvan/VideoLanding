@@ -2,6 +2,14 @@
 	font-family: 'Ubuntu', sans-serif;
 }
 
+.br420 {
+		display: none;
+	}
+
+.logo-mobile {
+	display: none;
+}
+
 body {
 	background-color: #11111b;
 	margin: 0;
@@ -899,10 +907,7 @@ border-bottom-right-radius: 0;
 	}
 
 
-	.mobile-arrow-down {
-		display: block;
-		margin: 0 auto;
-	}
+	
 
 	.question {
 		display: none;
@@ -1209,7 +1214,32 @@ border-bottom-right-radius: 0;
 		font-size: 17px;
 	}
 	h1 {
-		font-size: 20px;
+		font-size: 18px;
+		font-weight: 300;
+		margin-top: 70px;
+		margin-bottom: 5px;
+		letter-spacing: 1px;
+	}
+	.br420 {
+		display: block;
+	}
+	.wrapper {
+		background-size: 150%;
+		background-position: -110px 0px;
+	}
+
+	.header {
+		padding-top: 10px;
+	}
+	.logo-desktop {
+		display: none;
+	}
+	.logo-mobile {
+		display: block;
+		margin-right: 0;
+		float: left;
+		width: auto;
+		height: auto;
 	}
 
 	
@@ -1220,6 +1250,48 @@ border-bottom-right-radius: 0;
 	}
 	.data {
 		margin-left: 20px;
+	}
+
+	p.phone {
+		font-size: 14px;
+
+	}
+	.contact {
+		float: right;
+		margin-top: 5px;
+	}
+
+	.second_h1 strong {
+		font-weight: 500;
+		line-height: 1;
+		font-size: 21px;
+	}
+	strong.star {
+		font-weight: 300;
+		line-height: 0.5;
+		font-size: 21px;
+	}
+	.youtubeLogo {
+		margin-top: 10px;
+	}
+
+	.videoHeader {
+		font-size: 16px;
+		margin-top: 35px;
+	}
+
+	.video {
+		margin-top: -40px;
+	}
+
+	.mobile-arrow-down {
+		display: block;
+		margin: 0 auto;
+		margin-top: -40px;
+	}
+
+	.reply-form {
+		margin-top: 35px;
 	}
 
 
