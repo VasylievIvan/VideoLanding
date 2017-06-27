@@ -1203,7 +1203,11 @@ border-bottom-right-radius: 0;
 	.download h2 strong {
 	}
 	.download {
-		padding-top: 50px;
+		padding-top: 0;
+		margin-top: 30px;
+	}
+	.third-block {
+		background-position: -100px -30px;
 	}
 
 	/*.form h2 {
@@ -1292,6 +1296,20 @@ border-bottom-right-radius: 0;
 
 	.reply-form {
 		margin-top: 35px;
+	}
+
+	h2.second_h {
+		line-height: 1.7;
+		margin-top: -35px;
+		font-weight: 500;
+	}
+
+	.footer {
+		margin-top: 0;
+	}
+
+	.links {
+		padding-top: 0;
 	}
 
 
