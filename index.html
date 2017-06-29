@@ -536,10 +536,24 @@ if(!(ua.indexOf('Trident/7.0') + 1)) {
 	});
 
 	$('#download').click(function(){
+		if(window.matchMedia("screen and (max-width: 420px)").matches) {
+		$("html, body").stop().animate({scrollTop:1270-$(window).height()}, 500, 'swing');
+	} else if(window.matchMedia("screen and (max-width: 680px)").matches){
+		$("html, body").stop().animate({scrollTop:1520-$(window).height()}, 500, 'swing');
+
+	} else {
 		$("html, body").stop().animate({scrollTop:850}, 500, 'swing');
+	}
 	});
 	$('.youtubeLogo').click(function(){
+		if(window.matchMedia("screen and (max-width: 420px)").matches) {
+		$("html, body").stop().animate({scrollTop:1270-$(window).height()}, 500, 'swing');
+	} else if(window.matchMedia("screen and (max-width: 680px)").matches){
+		$("html, body").stop().animate({scrollTop:1520-$(window).height()}, 500, 'swing');
+
+	} else {
 		$("html, body").stop().animate({scrollTop:850}, 500, 'swing');
+	}
 	});
 });
 
