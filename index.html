@@ -170,9 +170,10 @@ $(window).on('mousewheel', function(e){
 			$(".form-h2").css("margin-top", 50);
 			$(".wrapper").css("background-position-y", 450-450);
 
-
-
 }	
+if(window.matchMedia("screen and (max-width: 420px)").matches) {
+	$(".videoHeader").css("margin-top", 35);
+}
 });
 
 	
