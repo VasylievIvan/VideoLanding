@@ -2,13 +2,15 @@ var ua = navigator.userAgent;
 
 
 	var allowAnimation = true;
+	var scrollVal = 0;
+	var scrollCur;
 
 	function checkAnimation() {
 		return(allowAnimation);
 
 	}
-$(window).on('mousewheel', function(e){
-	console.log("mousewheel On");
+/*$(document).on('mousewheel', function(e){
+	console.log("mousewheel document");
 
 	var st = $(this).scrollTop();  
 	if(window.matchMedia("screen and (min-width: 1350px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
@@ -88,11 +90,115 @@ $(window).on('mousewheel', function(e){
 }
      //prevent page fom scrolling
      //return false;
- });
+ });*/
+
+
+ /*$('iframe').load(function(){
+  $(this).contents().find("body").on('click', function(event) { alert('test'); });
+});
+
+ $('#TVAR').on('mousewheel', function(e) {
+ 	console.log('SUKKAAAAAAA');
+
+ });*/
+document.onwheel = function(e) {
+
+	console.log("mousewheel window");
+
+	var st = $(this).scrollTop();  
+	if(window.matchMedia("screen and (min-width: 1350px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
+		if(!allowAnimation) {
+			return false;
+		}
+    
+
+
+     if(e.wheelDelta < 0) {
+         //scroll down
+         //console.log('Down');         
+        
+        if(st>=0 && st<600) {
+        	allowAnimation = false;
+         	$("html, body").stop().animate({scrollTop:850}, 850-st, /*'swing',*/ function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=600 && st<1600) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:1780}, 1780-st, /*'swing',*/ function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=1600 && st<2600) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:2700}, 2700-st, /*'swing',*/ function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=2600 && st<2900) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:3140}, 3140-st, /*'swing',*/ function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=2900) {
+		}
+
+     }else {
+         //scroll up
+         //console.log('Up');
+
+         if(st>=0 && st<600) {
+         	allowAnimation = false;
+         	$("html, body").stop().animate({scrollTop:0}, st, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=600 && st<1600) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:0}, st, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=1600 && st<2600) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:850}, st-850, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=2600 && st<2900) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:1780}, st-1780, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+		if(st>=2900) {
+			allowAnimation = false;
+			$("html, body").stop().animate({scrollTop:2700}, st-2700, 'swing', function() {
+         		allowAnimation = true;
+         	});
+		}
+     }
+
+}
+     //prevent page fom scrolling
+     return false;
+ }/*)*/;
+
+
+/*window.onwheel = function() {
+	scrollCur = $(this).scrollTop();
+}*/
 
 
 	$(window).scroll(function() {   
 		if(window.matchMedia("screen and (min-width: 1350px)").matches && !(ua.indexOf('Trident/7.0') + 1)) {
+
+
+
+
+
+
 
 	var st = $(this).scrollTop();
 	$(".backgrounds").css({
@@ -270,11 +376,17 @@ if((ua.indexOf('Trident/7.0') + 1)) {
 
 $(document).ready(function(){
 
+	
 
+
+
+
+
+	scrollVal = $(this).scrollTop();
 	var first_name_flag = 0;
-   var second_name_flag = 0;
-   var email_flag = 0;
-   var phone_flag = 0;
+   	var second_name_flag = 0;
+   	var email_flag = 0;
+   	var phone_flag = 0;
 	if((ua.indexOf('Trident/7.0') + 1)) {
 		$(".backgrounds").hide();
 		$(".footeк").css("left", "50%");
